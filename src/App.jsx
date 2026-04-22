@@ -1,16 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AdminDashboard from "./components/AdminDashbord/admindasboard";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-    <h3>this is the smartseason crop track system</h3>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<h2>Home Page</h2>} />
+        <Route path="/admin" element={<AdminDashboard />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
